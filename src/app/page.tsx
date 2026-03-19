@@ -2,6 +2,48 @@
 
 import { useState } from "react";
 
+/* ───────────────────── Trust Logos (greyscale) ──────────── */
+function NHSLogo() {
+  return (
+    <svg width="64" height="26" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="200" height="80" rx="4" fill="#d4d4d4" />
+      <text x="100" y="56" textAnchor="middle" fill="#0A0A0A" fontSize="48" fontWeight="700" fontFamily="Arial, sans-serif">NHS</text>
+    </svg>
+  );
+}
+
+function SpireLogo() {
+  return (
+    <svg width="80" height="22" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="52" fill="#d4d4d4" fontSize="50" fontWeight="600" fontFamily="Arial, sans-serif" letterSpacing="6">SPIRE</text>
+    </svg>
+  );
+}
+
+function NuffieldLogo() {
+  return (
+    <svg width="90" height="22" viewBox="0 0 340 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="50" fill="#d4d4d4" fontSize="40" fontWeight="600" fontFamily="Arial, sans-serif" letterSpacing="4">NUFFIELD</text>
+    </svg>
+  );
+}
+
+function RamsayLogo() {
+  return (
+    <svg width="80" height="22" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="50" fill="#d4d4d4" fontSize="42" fontWeight="500" fontFamily="Arial, sans-serif" letterSpacing="5">RAMSAY</text>
+    </svg>
+  );
+}
+
+function BupaLogo() {
+  return (
+    <svg width="60" height="24" viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="58" fill="#d4d4d4" fontSize="56" fontWeight="700" fontFamily="Arial, sans-serif" letterSpacing="3">bupa</text>
+    </svg>
+  );
+}
+
 /* ───────────────────────── Header ───────────────────────── */
 function Header() {
   return (
@@ -48,12 +90,12 @@ function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-charcoal/70" />
-      <div className="relative z-10 max-w-3xl mx-auto px-8 py-24">
+      <div className="relative z-10 max-w-5xl mx-auto px-8 py-24">
         <span className="inline-block text-xs tracking-[0.3em] uppercase text-gold border border-gold/40 px-4 py-1.5 mb-8">
           AI-Powered Market Intelligence
         </span>
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-offwhite leading-tight mb-6">
-          See Healthcare Real Estate Opportunities Before Anyone Else
+          See Healthcare <span className="whitespace-nowrap">Real Estate</span> Opportunities Before Anyone Else
         </h1>
         <p className="text-muted text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
           Vantage monitors thousands of signals across the UK healthcare sector
@@ -78,12 +120,12 @@ function Hero() {
           <p className="text-xs text-muted mb-4 tracking-wide uppercase">
             Trusted by leading healthcare operators
           </p>
-          <div className="flex items-center justify-center gap-8 text-muted/60 text-sm tracking-widest uppercase">
-            <span>NHS</span>
-            <span>Spire</span>
-            <span>Nuffield</span>
-            <span>Ramsay</span>
-            <span>Bupa</span>
+          <div className="flex items-center justify-center gap-10 md:gap-14 opacity-70">
+            <NHSLogo />
+            <SpireLogo />
+            <NuffieldLogo />
+            <RamsayLogo />
+            <BupaLogo />
           </div>
         </div>
       </div>
