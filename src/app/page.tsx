@@ -2,48 +2,6 @@
 
 import { useState } from "react";
 
-/* ───────────────────── Trust Logos (greyscale) ──────────── */
-function NHSLogo() {
-  return (
-    <svg width="64" height="26" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="200" height="80" rx="4" fill="#d4d4d4" />
-      <text x="100" y="56" textAnchor="middle" fill="#0A0A0A" fontSize="48" fontWeight="700" fontFamily="Arial, sans-serif">NHS</text>
-    </svg>
-  );
-}
-
-function SpireLogo() {
-  return (
-    <svg width="80" height="22" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="52" fill="#d4d4d4" fontSize="50" fontWeight="600" fontFamily="Arial, sans-serif" letterSpacing="6">SPIRE</text>
-    </svg>
-  );
-}
-
-function NuffieldLogo() {
-  return (
-    <svg width="90" height="22" viewBox="0 0 340 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="50" fill="#d4d4d4" fontSize="40" fontWeight="600" fontFamily="Arial, sans-serif" letterSpacing="4">NUFFIELD</text>
-    </svg>
-  );
-}
-
-function RamsayLogo() {
-  return (
-    <svg width="80" height="22" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="50" fill="#d4d4d4" fontSize="42" fontWeight="500" fontFamily="Arial, sans-serif" letterSpacing="5">RAMSAY</text>
-    </svg>
-  );
-}
-
-function BupaLogo() {
-  return (
-    <svg width="60" height="24" viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="58" fill="#d4d4d4" fontSize="56" fontWeight="700" fontFamily="Arial, sans-serif" letterSpacing="3">bupa</text>
-    </svg>
-  );
-}
-
 /* ───────────────────────── Header ───────────────────────── */
 function Header() {
   return (
@@ -80,7 +38,7 @@ function Header() {
 /* ───────────────────────── Hero ───────────────────────── */
 function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+    <section className="relative flex items-center justify-center text-center overflow-hidden pt-24 pb-20">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-15"
@@ -102,7 +60,7 @@ function Hero() {
           to surface development opportunities months before formal planning
           consent.
         </p>
-        <div className="flex items-center justify-center gap-4 mb-16">
+        <div className="flex items-center justify-center gap-4 mb-12">
           <a
             href="#cta"
             className="bg-gold text-charcoal font-semibold px-8 py-3.5 text-sm hover:bg-gold/90 transition"
@@ -116,17 +74,18 @@ function Hero() {
             See How It Works
           </a>
         </div>
-        <div>
-          <p className="text-xs text-muted mb-4 tracking-wide uppercase">
-            Trusted by leading healthcare operators
-          </p>
-          <div className="flex items-center justify-center gap-10 md:gap-14 opacity-70">
-            <NHSLogo />
-            <SpireLogo />
-            <NuffieldLogo />
-            <RamsayLogo />
-            <BupaLogo />
-          </div>
+
+        {/* Demo Video */}
+        <div className="max-w-4xl mx-auto rounded-lg overflow-hidden ring-1 ring-gold/20 shadow-2xl shadow-gold/5">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full aspect-video"
+          >
+            <source src="/vantage-demo.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
